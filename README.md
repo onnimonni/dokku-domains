@@ -4,6 +4,7 @@ Dokku domains plugin
 =====
 
 [Dokku](https://github.com/progrium/dokku) plugin to set custom domains for dokku apps.
+This fork is just listening both http and https protocols and not doing redirects if ssl is in use.
 
 Installation
 -----
@@ -11,7 +12,7 @@ Installation
 * Requires Ruby >= 1.9.3 present on the host
 
 ```bash
-git clone https://github.com/krisrang/dokku-domains.git /var/lib/dokku/plugins/domains
+git clone https://github.com/onnimonni/dokku-domains.git /var/lib/dokku/plugins/domains
 ```
 
 Commands
