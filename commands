@@ -19,6 +19,7 @@ if cmd && cmd.start_with?("domains")
   
   approot = File.join(root, app)
   domainfile = File.join(approot, 'DOMAINS')
+  redirectfile = File.join(approot, 'NGINXREDIRECTS')
 
   fail "App #{app} does not exist" if !Dir.exist?(approot)
 
@@ -26,6 +27,12 @@ if cmd && cmd.start_with?("domains")
     notice "Creating #{domainfile}"
     FileUtils.touch(domainfile)
   end
+  
+  if !File.exist?(redirectfile)
+    notice "Creating #{redirectfile}"
+    FileUtils.touch(redirectfile)
+  end
+  
 end
 
 case cmd
