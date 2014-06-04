@@ -18,7 +18,7 @@ hostname = "#{app.sub('/','-')}.#{vhost} " + File.read(domainspath).strip
 port = File.read(File.join(root, app, 'PORT')).strip
 ssl = File.join(root, app, 'ssl')
 use_ssl = File.exists?(File.join(ssl, 'server.crt')) && File.exists?(File.join(ssl, 'server.key'))
-if use_ssl.nil?
+unless use_ssl
   notice "App doesn't have own ssl-certs"
   #If theres shared ssl-certs in dokku-root/ssl we are opening https channel with those keys
   ssl = File.join(root, 'ssl')
