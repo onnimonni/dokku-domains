@@ -3,8 +3,8 @@
 Dokku domains plugin
 =====
 
-[Dokku](https://github.com/progrium/dokku) plugin to set custom domains for dokku apps.
 This fork is just listening both http and https protocols and not doing redirects if ssl is in use.
+It also uses automatically ssl keys from dokku root if they are placed in /ssl folder
 
 Installation
 -----
